@@ -2,6 +2,7 @@ import React from 'react';
 import logo from './assets/rocket.svg';
 import astronaut from './assets/astronaut.svg';
 import './App.css';
+import TechList from './components/TechList';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
         Learn React
       </a>
+      <TechList />
       <img className="astronaut" src={astronaut} alt="Astronaut" />
     </div>
   );
