@@ -3,7 +3,7 @@ import 'jest-localstorage-mock';
 import '@testing-library/jest-dom';
 import { render, fireEvent, cleanup } from '@testing-library/react';
 
-import TechList from '~/components/TechList';
+import TechList from '~/components/TechListUseState';
 
 describe('TechList Component', () => {
   beforeEach(() => {

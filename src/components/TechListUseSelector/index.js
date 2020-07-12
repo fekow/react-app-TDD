@@ -1,24 +1,17 @@
-import React, { useState, useEffect } from 'react';
-
-// import { Container } from './styles';
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable jsx-a11y/label-has-for */
+import React, { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { addTech } from '~/store/modules/techs/actions';
 
 function TechList() {
-  const [techs, setTechs] = useState([]);
   const [newTech, setNewTech] = useState('');
+  const dispatch = useDispatch();
 
-  useEffect(() => {
-    const data = JSON.parse(localStorage.getItem('Techs'));
-    if (data) {
-      setTechs(data);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('Techs', JSON.stringify(techs));
-  }, [techs]);
+  const techs = useSelector(state => state.techs);
 
   function handleAddTech() {
-    setTechs([...techs, newTech]);
+    dispatch(addTech(newTech));
     setNewTech('');
   }
 

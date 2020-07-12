@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './assets/rocket.svg';
 import astronaut from './assets/astronaut.svg';
 import './App.css';
-import TechList from './components/TechList';
+import TechList from './components/TechListUseState';
 
 function App() {
   return (
